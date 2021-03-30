@@ -5,7 +5,7 @@ int bs(int a[],int l,int h,int key)
 {int mid;
     while(l<=h)
     {
-        mid=(l+h-1)/2;
+        mid=(l+h)/2;
         if(a[mid]==key)
         return mid;
         
