@@ -63,4 +63,4 @@ int findPosition(int n)
     return p;
 }
 
-12)
+
