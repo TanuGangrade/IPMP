@@ -1,9 +1,6 @@
 class Solution{
 public:	
-	/* if x is present in arr[] then returns the count
 	
-	
-		of occurrences of x, otherwise returns 0. */
 	int bsTop(int a[],int l,int h,int key)
     {int mid;
     while(l<=h)
