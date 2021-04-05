@@ -1,0 +1,16 @@
+void deleteList(Node** head_ref)
+{
+ 
+    Node* curr = *head_ref;
+    Node* next = NULL;
+ 
+    while (curr != NULL)
+    {
+        next = curr->next;
+        free(curr);
+        curr = next;
+    }
+ 
+        
+    *head_ref = NULL;
+}
