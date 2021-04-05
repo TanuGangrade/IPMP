@@ -1,24 +1,24 @@
-int getNthFromLast(Node *head, int n)
-{
-       
-       Node*n1=head,*n2=head,*prev=NULL;
+ListNode* removeNthFromEnd(ListNode* head, int n) {
+        
+        ListNode*n1=head,*n2=head,*prev=head;
         
        for(int i=0;i<n;i++)
        {
            n1=n1->next;
        }
+        
+        if(n1==NULL)
+            return head->next;
+        
         while(n1!=NULL)
-        {
+        {prev=n2;
             n2=n2->next;
-            prev=n1;
+            
             n1=n1->next;
         }
         
-        prev->next=n1->next;
+       
+            prev->next=n2->next;
+        return head;
         
-        n2=head;
-        while(n2!=NULL)
-        cout<<n2->data<<" ";
-        return 0;
-        
-}
+    }
