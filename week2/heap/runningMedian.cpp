@@ -1,8 +1,9 @@
 void printMedians(double arr[], int n)
 {
-    priority_queue<double> s;//lower half
+    priority_queue<double> s;//lower half, max heap, so we store smaller elements here
   
-    priority_queue<double,vector<double>,greater<double> > g;
+    priority_queue<double,vector<double>,greater<double> > g;// min heap
+    // we need to store smaller half nums in max heap so we can take the largest of them , and larger half nums in min heap so we get the smallest among them
   
     double med = arr[0];
     s.push(arr[0]);
@@ -13,9 +14,10 @@ void printMedians(double arr[], int n)
     {
         double x = arr[i];
   
-        if (s.size() > g.size())
+        if (s.size() > g.size()) //max heap has more elements
         {
-            if (x < med)
+            if (x < med) // so x would do to max heap, but then there woule be more then 1 difference in the heaps, 
+                //so we transfer the top(largest) of max heap(smaller half elements) to min heap
             {
                 g.push(s.top());
                 s.pop();
