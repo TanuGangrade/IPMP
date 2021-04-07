@@ -26,7 +26,7 @@ return;}
         break;
     }
 
-    if(str<top)
+    if(str<top) // if there are more lines above the needed amount, in the whileloop, the top moves to the point before the /n in the n-1th line so we do +2 
     top+=2;
 
     cout<<top<<endl;
