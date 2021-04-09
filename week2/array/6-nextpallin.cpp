@@ -71,7 +71,6 @@ void generateNextPalindrome( int num[], int n )
 	}
 }
 
-// A utility function to check if num has all 9s
 int AreAll9s( int* num, int n )
 {
 	int i;
