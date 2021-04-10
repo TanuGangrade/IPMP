@@ -5,8 +5,9 @@
         for(int i=0;i<n;i++)
         a[i]=arr[i];
         
-        next_permutation(a, a + n);
-        
-        vector<int>v(a,a+n);
-        return v;
+        bool t= next_permutation(a, a + n);// rearranges a, returns true if the original was not already the largest number
+        if(t)
+        {vector<int>v(a,a+n);
+            return v;}
+        else return -1;
     }
