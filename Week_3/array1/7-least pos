@@ -1,0 +1,13 @@
+int firstMissingPositive(vector<int>& a) {
+         map<int,int>m;
+        int n=a.size();
+        for(int i=0;i<n;i++)
+        m[a[i]]+=1;
+        
+        for(int j=1;j<=n+1;j++)
+        {//cout<<j<<m[j]<<" ";
+            if(m[j]==0)
+            return j;
+        }
+        return -1;
+    }
