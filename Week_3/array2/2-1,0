@@ -1,0 +1,5 @@
+void binSort(int A[], int N)
+    {
+       //Your code here
+          sort(A,A+N);
+}
