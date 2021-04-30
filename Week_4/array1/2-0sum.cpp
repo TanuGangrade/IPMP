@@ -10,7 +10,7 @@
             if(m[sum]!=0)
             return true;
             else
-            m[sum]+=1;
+            m[sum]=i;//store index of where that sum occured so that we have starting index if we wanna display the subaray
             
             
         }
