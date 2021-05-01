@@ -4,12 +4,9 @@ int maxSubarraySum(int arr[], int n){
         int final=0;
         int maxendhere=0;
         int i=0;
-        while(arr[i]<0)
-        i++;
         
-        //maxendhere=arr[i];
         final=arr[i];
-        for(;i<n;i++)
+        for(i=0;i<n;i++)
         {
             maxendhere+=arr[i];
             if(final<maxendhere)
