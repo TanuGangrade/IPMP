@@ -2,7 +2,9 @@ string findSubString(string str, string pat)
 {
     int l1=str.length();
     int l2=pat.length();
- 
+    int start=0, finalstart=-1;
+    int min=INT_MAX;
+
     if (l1<l2) {
        return "-1";
     }
@@ -12,9 +14,7 @@ string findSubString(string str, string pat)
  
     for (int i=0; i<l2; i++)
         hashP[pat[i]]++;
- 
-    int start=0, finalstart=-1, min=INT_MAX;
- 
+  
     int count=0;
     for (int j=0; j < l1; j++) {
        
