@@ -36,8 +36,7 @@ int evaluate(string tokens){
 		else if(isdigit(tokens[i])){
 			int val = 0;
 			
-			while(i < tokens.length() &&
-						isdigit(tokens[i]))
+			while(i < tokens.length() && isdigit(tokens[i]))
 			{
 				val = (val*10) + (tokens[i]-'0');
 				i++;
@@ -70,8 +69,7 @@ int evaluate(string tokens){
 		
 		else
 		{
-			while(!ops.empty() && precedence(ops.top())
-								>= precedence(tokens[i])){
+			while(!ops.empty() && precedence(ops.top()) >= precedence(tokens[i])){
 				int val2 = values.top();
 				values.pop();
 				
