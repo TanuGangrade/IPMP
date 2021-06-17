@@ -5,11 +5,11 @@ bool isCyclicUtil(int v, vector<bool> &visited, vector<bool> &recStack, vector<i
 			visited[v] = true; 
 			recStack[v] = true; 
 
-			for(int i = 0; i < (int)adj[v].size(); ++i) 
-			{ 
-				if ( !visited[adj[v][i]] && isCyclicUtil(adj[v][i], visited, recStack, adj)) 
+		for(int i = 0; i < (int)adj[v].size(); ++i) 
+		{ 
+			if ( !visited[adj[v][i]] && isCyclicUtil(adj[v][i], visited, recStack, adj)) 
 					return true; 
-				else if (recStack[adj[v][i]]) 
+			else if (recStack[adj[v][i]]) 
 					return true; 
 			} 
 
