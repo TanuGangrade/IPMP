@@ -1,4 +1,4 @@
-int matrixChainMemoised(int* p, int i, int j)
+int matrixChainMemoised(vector<vector<int>>&dp,vector<int> p, int i, int j)
 {
     if (i == j)
     {
@@ -18,8 +18,9 @@ int matrixChainMemoised(int* p, int i, int j)
     }
     return dp[i][j];
 }
-int MatrixChainOrder(int* p, int n)
+int MatrixChainOrder(vector<int> p, int n)
 {
     int i = 1, j = n - 1;
-    return matrixChainMemoised(p, i, j);
+     vector<vector<int>> dp( 100 , vector<int> (100, 0));
+    return matrixChainMemoised(dp,p, i, j);
 }
