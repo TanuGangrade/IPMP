@@ -21,6 +21,6 @@ int matrixChainMemoised(vector<vector<int>>&dp,vector<int> p, int i, int j)
 int MatrixChainOrder(vector<int> p, int n)
 {
     int i = 1, j = n - 1;
-     vector<vector<int>> dp( 100 , vector<int> (100, 0));
+     vector<vector<int>> dp( 100 , vector<int> (100, -1));
     return matrixChainMemoised(dp,p, i, j);
 }
